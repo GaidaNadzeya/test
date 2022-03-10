@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Приложение по подбору подарков</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+<form class="decor" action="/pagefour" method="get" >
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+    <div class="form-inner">
+        <h2 text> Варианты, которые могут вам подойти:</h2>
+    <div th:each = "el : ${gif}">
+        <H3 th:text = "${el.name}"/>
+    </div>
+
+    </div>
+</form>
+</body>
+</html>
